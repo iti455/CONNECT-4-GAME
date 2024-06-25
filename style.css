@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('background.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(7, 60px); /* Further reduced cell size */
+  grid-template-rows: repeat(6, 60px);    /* Further reduced cell size */
+  gap: 3px;  /* Further reduced gap between cells */
+  background-color: #333;
+  padding: 8px;  /* Adjusted padding */
+  border-radius: 10px;
+}
+
+.cell {
+  width: 60px;   /* Further reduced cell size */
+  height: 60px;  /* Further reduced cell size */
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cell.red {
+  background-color: red;
+}
+
+.cell.yellow {
+  background-color: yellow;
+}
+
+#info {
+  text-align: center;
+}
+
+#status {
+  margin-top: 10px;
+  font-size: 1.2em;  /* Adjusted font size */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1em;  /* Adjusted button font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
